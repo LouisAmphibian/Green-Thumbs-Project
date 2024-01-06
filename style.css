@@ -1,0 +1,505 @@
+
+
+*{/*Overiding for the website to fill up the whole page */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+/*My body */
+body{
+    display: flex;
+    flex-direction:column;
+   min-height: 100vh; 
+}
+
+/*Were my main content*/
+main{
+    flex-grow: 1;
+    flex-shrink: 0; /* Prevent main from shrinking */
+    width:100%;
+    top:20%;
+    bottom: 25%;
+    text-align: center;
+    position: absolute;
+    padding-bottom: 100px;
+     z-index: 1; /* Add a z-index to place main above the footer */
+}
+
+
+/*My background class*/
+.banner{
+   
+    width:100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("./Images\ &\ Logo/Planting.jpg"); 
+    background-size: cover; /* Cover the entire viewport*/
+    background-position: center;
+    background-attachment: fixed; /* Keep the background fixed as you scroll*/
+    background-repeat: no-repeat; /* Do not repeat the image */
+      
+}
+
+/*Styling my nav letters/words */
+li, a{
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size:16px;
+    color: green;
+    text-decoration: none;
+}
+
+/*This will control my log image*/
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+    width: 80px;
+}
+
+
+/*Creating a border and controling what its inside the header */
+header{
+    position: fixed;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.2);
+    width: 100%;
+    margin: auto;
+    padding: 15px 90px;
+    display: flex;
+    align-items:center;
+    justify-content:flex-end;
+    z-index: 2;
+    transition: all 0.4s;
+}
+
+/*Putting the ul n li in one line*/
+header ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+    margin-right: 20px;
+}
+
+/*Putting the li into  list*/
+header li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+/*Creating a transition for the while line*/
+header li a{
+    transition: all 0.1s ease 0s;
+}
+
+/*When  after it looks when I hover*/
+header ul li::after{
+    content: '';
+    height: 3px;
+    width:0;
+    background: white;
+    position: absolute;
+    left:0;
+    bottom : -10px; 
+    transition: 0.4s ease 0s;
+}
+/*The color when I hover*/
+header li a:hover{
+    color: white;
+}
+
+/**/
+header ul li:hover::after{
+    width: 100%;
+}
+
+/*when scrolling*/
+.header-scrolled{
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.15); /*Juse to look even better*/
+}
+
+
+
+/*Style the search box inside the navigation ba*/
+
+
+/*Footer*/
+footer{
+    background:gray;
+    padding: 20px 0;
+    text-align: center; 
+    position: relative;
+    bottom: 0;
+    
+  
+}
+footer p{
+    color: white;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+footer h3 {
+    color: red;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+footer h4{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer .footer-content .social{
+  padding-bottom: 25px;
+}
+ 
+footer .footer-content .social a{
+    font-size: 25px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+
+
+/*My index*/
+.welcome{
+    width:100%;
+    position: absolute;
+    top: 40vh;
+    text-align: center;
+}
+.welcome p{
+    margin:auto;
+    font-weight: 100;
+    line-height: 25px;
+    color: white;
+    font-size: 30px;
+    margin-top: 25px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.welcome h1{
+    font-size: 70px;
+    font-family: monospace;
+    color: green;
+    align-content: center;
+}
+
+.aboutus h1{
+    font-size: 50px;
+    font-family: monospace;
+    color: green;
+    align-content: center;
+}
+.aboutus p{
+    margin-top: 25px;
+    font-weight: 100;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+
+.ourwork h1{
+    font-size: 50px;
+    font-family: monospace;
+    color: green;
+    align-content: center;
+}
+.ourwork p{
+    font-weight: 100;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 25px;
+    margin-bottom:  10px;
+    font-size: 19px;
+}
+
+/*Our work images*/
+.image-wrapper_top{ /*wrapper for top*/
+    display: flex;
+    align-items: center;
+    position: relative; /* Add position: relative to the .wrapper */
+}
+
+.image-wrapper_bottom{ /*wrapper for bottom*/
+    padding-top: 2%;
+    display: flex;
+    position: relative;
+    
+}
+
+.image{
+    position: absolute; /*making the image absolute made my hover to move with the picture*/
+  /* transform: translate(0px,25px);  /* Shift both image to the right and bit down */
+   margin-top:40vh;
+}
+
+img{ 
+    width: 100%;
+    display: block;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;/*The transition when hovered*/
+}
+
+/*When the mouse hovers the image*/
+.image:hover .content{
+    opacity: 1;
+    transition: opacity 0.6s; /* Added the property to transition */
+}
+
+.content p{
+    font-size: 19px;
+    color:#fff;
+}
+
+.content > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+
+/*Making the content hover as well*/
+.content:hover> *{
+    transform: translateY(0px); /*Hover in the y-axis and stop with 0px*/
+}
+
+
+.gallery{
+    width:100%;
+    position: absolute;
+    top:20%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.gallery h1{
+    margin-top: 100px;
+    font-size: 50px;
+    font-family: monospace;
+    color: green;
+    align-content: center;
+}      
+.photo-gallery{
+    width: 90%;
+    margin-top: 250px;
+    margin-bottom: 100px;
+   display: grid;   
+   width: 70%;
+   
+}
+.container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .photo-gallery img{
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+
+
+
+.container .btn{
+    margin: auto;
+    background: #222;
+    padding: 15px 40px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -305%;
+    display: grid;
+    
+}
+
+.container .btn a{
+    color: #ccc;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/*Contact Us*/
+.contact_Us h1{
+    font-size: 50px;
+    font-family: monospace;
+    color: green;
+    align-content: center;
+}
+
+.contact_Us p{
+    margin-top: 25px;
+    font-weight: 100; 
+    font-size: 19px;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+.contact_Us h2{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family:Georgia;
+    color: aqua;
+}
+
+.reachUs-container{
+    margin-top: 100px;
+}
+
+.involved h1{
+    font-size: 50px;
+    font-family: monospace;
+    color: green;
+    align-content: center;
+}
+.involved p{
+    color: orangered;
+    font-size: 22px;
+    font-style: oblique;
+    font-family: sans-serif;
+}
+
+
+.mayo label{
+    color: white;
+}
+
+#mayo-form{
+ color: white;   
+}
+
+/*Form box for Get Involved page*/
+.form-box{
+    width: 380px;
+    height: 475px;
+    position: relative;
+    margin: 2% auto;
+    background: rgb(0,0,0,0.3);
+    padding: 35px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.form-box p{
+    color: burlywood;
+    font: verdana;
+    font-size: 20px;
+    font-style: normal;
+}
+
+
+
+.check-box{
+    margin:30px 10px 34px 0;
+}
+
+.input-field{
+   width: 100%;   
+   padding: 10px;
+   margin: 5px 0;
+   border-left: 0;
+   border-top: 0;
+   border-right: 0;
+   border-bottom: 1px solid #999;
+   outline: none;
+}
+
+.text-field{
+    width: 100%;
+    height: 100px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 25px;
+    font-weight:600;
+    font-family:'Franklin Gothic Medium';
+
+}
+.reset-btn{
+    background-color: #ffffff;
+    
+}
+
+.submit-btn{
+    background-color: darkseagreen;
+}
+
+
+/*Form box for Contact page*/
+.form-box-contactUs{
+    width: 380px;
+    height: 425px;
+    position: relative;
+    margin: 2% auto;
+    background: rgb(0,0,0,0.3);
+    padding: 35px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+@media(min-width:375px) {
+
+     /*Get involved page*/
+    .form-box {
+        font-size: 15px;
+        max-width: 400px;
+        top: -40px;
+    }
+}
+
+/*normal laptop screen*/
+@media (min-width:1366px) {
+    main{
+        top:25%;
+    }
+
+    .banner{
+        height: 115vh;
+    }
+
+    /*Get involved page*/
+    .form-box {
+        max-width: 400px
+    }
+    
+    
+    .input-field{
+      width: 280px;
+    }
+}
+
