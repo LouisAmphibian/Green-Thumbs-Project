@@ -4,24 +4,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }   
 
 /*My body */
 body{
     display: flex;
     flex-direction:column;
-  
+    
 }
 
 /*Were my main content*/
 main{
-    flex-shrink: 0; /* Prevent main from shrinking */
+    color: blue;
     width:100%;
     height:fit-content; /*fit content to the main element*/
     top:20%;
     text-align: center;
     position: absolute;
-     z-index: 1; /* Add a z-index to place main above the footer */
+
 }
  
 
@@ -31,7 +32,7 @@ main{
 /*My background class*/
 .banner{
     width:100%;
-    /*height: 90vh;*/
+    height: 920px;
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("./Images\ &\ Logo/Planting.jpg"); 
     background-size: cover; /* Cover the entire viewport*/
     background-position: center;
@@ -129,33 +130,46 @@ footer{
     background:gray;
     padding: 20px 0;
     text-align: center; 
-    position: relative;
+    position: static;
     bottom: 0;
     width: 100%;
     margin: auto;
   
 }
+
+.footer-content{
+    text-align: center; 
+}
+
+.footer-sub-content{
+    text-align: left; 
+    margin-left: 70px;
+}
+
 footer p{
     color: white;
     font-size: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
+    
 }
 
 
 
 footer h3 {
-    color: red;
+    color: darkgreen;
     font-size: 25px;
     margin-bottom: 15px;
 }
 
-footer h4{
-    font-size: 20px;
-    color: white;
-    margin-bottom: 20px;
+footer .footer-content .footer-sub-content .sub-content-one{
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
+footer .footer-content .footer-sub-content .sub-content-two{
+    margin-bottom: 30px;
+}
 footer .footer-content .social{
   padding-bottom: 25px;
 }
@@ -188,7 +202,7 @@ footer .footer-content .social a{
     font-weight: 100;
     line-height: 25px;
     color: white;
-    font-size: 30px;
+    font-size: clamp(1rem,3vw,2rem);
     margin-top: 25px;
     margin-right: 50px;
     margin-left: 50px;
@@ -419,34 +433,5 @@ button{
     border-radius: 25px;
 }
 
-@media(min-width:375px) {
 
-     /*Get involved page*/
-    .form-box {
-        font-size: 15px;
-        max-width: 400px;
-        top: -40px;
-    }
-}
-
-/*normal laptop screen*/
-@media (min-width:1366px) {
-    main{
-        top:25%;
-    }
-
-    .banner{
-        height: 115vh;
-    }
-
-    /*Get involved page*/
-    .form-box {
-        max-width: 400px
-    }
-    
-    
-    .input-field{
-      width: 280px;
-    }
-}
 
