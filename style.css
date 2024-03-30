@@ -151,15 +151,28 @@ footer p{
     font-size: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     
 }
 
+ footer .copyright{
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
 
+footer .footer-content h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
 
 footer h3 {
     color: darkgreen;
     font-size: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 footer .footer-content .footer-sub-content .sub-content-one{
@@ -203,7 +216,7 @@ footer .footer-content .social a{
     line-height: 25px;
     color: white;
     font-size: clamp(1rem,3vw,2rem);
-    margin-top: 25px;
+    margin-top: 20px;
     margin-right: 50px;
     margin-left: 50px;
 }
@@ -212,6 +225,13 @@ footer .footer-content .social a{
     font-family: monospace;
     color: green;
     align-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.welcome main p{
+    font-family: Georgia, serif;
+    font-weight: lighter;
 }
 
 .aboutus h1{
